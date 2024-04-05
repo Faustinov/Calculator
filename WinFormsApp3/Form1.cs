@@ -2,16 +2,17 @@ namespace WinFormsApp3
 {
     public partial class Form1 : Form
     {
+        double numberOne;
+        double numberTwo;
+        double endResult;
+        int sign;
+        int signNum;
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        double number1;
-        double number2;
-        double number3solution;
-        int sign = 0;
-        int signnum = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,63 +70,64 @@ namespace WinFormsApp3
 
         private void button13_Click(object sender, EventArgs e)
         {
-            number1 = double.Parse(textBox1.Text);
+            numberOne = double.Parse(textBox1.Text);
             textBox1.Clear();
-            signnum = 1;
+            signNum = 1;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            number1 = double.Parse(textBox1.Text);
+            numberOne = double.Parse(textBox1.Text);
             textBox1.Clear();
-            signnum = 2;
+            signNum = 2;
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            number1 = double.Parse(textBox1.Text);
+            numberOne = double.Parse(textBox1.Text);
             textBox1.Clear();
-            signnum = 3;
+            signNum = 3;
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            number1 = double.Parse(textBox1.Text);
+            numberOne = double.Parse(textBox1.Text);
             textBox1.Clear();
-            signnum = 4;
+            signNum = 4;
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
             solution();
         }
+        
         private void solution()
         {
-            number2 = double.Parse(textBox1.Text);
+            numberTwo = double.Parse(textBox1.Text);
 
-            if (signnum == 1 && textBox1.Text == "0")
+            if (signNum == 1 && textBox1.Text == "0")
             {
-                textBox1.Text = "юанаю";
+                textBox1.Text = "О©╫О©╫О©╫О©╫О©╫";
             }
-            else if (signnum == 1)
+            else if (signNum == 1)
             {
-                number3solution = number1 / number2;
-                textBox1.Text = number3solution.ToString();
+                endResult = numberOne / numberTwo;
+                textBox1.Text = endResult.ToString();
             }
-            else if (signnum == 2)
+            else if (signNum == 2)
             {
-                number3solution = number1 * number2;
-                textBox1.Text = number3solution.ToString();
+                endResult = numberOne * numberTwo;
+                textBox1.Text = endResult.ToString();
             }
-            else if (signnum == 3)
+            else if (signNum == 3)
             {
-                number3solution = number1 - number2;
-                textBox1.Text = number3solution.ToString();
+                endResult = numberOne - numberTwo;
+                textBox1.Text = endResult.ToString();
             }
-            else if (signnum == 4)
+            else if (signNum == 4)
             {
-                number3solution = number1 + number2;
-                textBox1.Text = number3solution.ToString();
+                endResult = numberOne + numberTwo;
+                textBox1.Text = endResult.ToString();
             }
         }
     }
